@@ -1,0 +1,22 @@
+create database test_task;
+use test_task;
+
+create table department (
+	XML_ID nvarchar(5) primary key,
+    PARENT_XML_ID nvarchar(5),
+    NAME_DEPARTMENT nvarchar(100)
+);
+
+create table users (
+	XML_ID nvarchar(5) primary key,
+    LAST_NAME nvarchar(30) not null,
+    NAME nvarchar(30) not null,
+    SECOND_NAME nvarchar(30) not null,
+    DEPARTMENT nvarchar(5) not null, 
+    WORK_POSITION nvarchar(30) not null,
+    EMAIL varchar(40) not null,
+    MOBILE_PHONE varchar(30),
+    PHONE varchar(15),
+    LOGIN nvarchar(40) not null,
+    PASSWORD nvarchar(40) not null
+);

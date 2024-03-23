@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<title>Test Task</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h2>Загрузите файл таблицы department</h2>
+		<form id="dep_form" name="Department" action="./src/php/processDepatrment.php" method="post"
+			enctype="multipart/form-data" onsubmit="return uploadFileAndList(event, 'dep_form')">
+			<label for="department_file">Загрузить файл в таблицу department:</label>
+			<input type="file" name="department_file" id="department_file" accept=".csv"><br><br>
+			<input type="submit" value="Загрузить" name="submit_department">
+		</form>
+		<h2>Загрузите файл таблицы users</h2>
+		<form id="users_form" name="Users" action="./src/php/processUsers.php" method="post"
+			enctype="multipart/form-data" onsubmit="return uploadFileAndList(event, 'users_form')">
+			<label for="users_file">Загрузить файл в таблицу users:</label>
+			<input type="file" name="users_file" id="users_file" accept=".csv"><br><br>
+			<input type="submit" value="Загрузить" name="submit_users">
+		</form>
+
+
+		<h2>Users</h2>
+		<table id="usersTable"></table>
+
+		<h2>Department</h2>
+		<table id="departmentsTable"></table>
+		<button id="updateButton">Обновить данные</button>
+
+		<ul id="file_list">Список загруженных файлов:<ul />
+	</div>
+</body>
+<script src="./assets/js/script.js"></script>
+
+</html>
